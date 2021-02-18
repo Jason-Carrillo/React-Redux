@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import CounterControl from '../../components/CounterControl/CounterControl';
 import CounterOutput from '../../components/CounterOutput/CounterOutput';
 
+import * as actionTypes from '../../store/actions'
+
 class Counter extends Component {
     state = {
         counter: 0
@@ -38,7 +40,7 @@ class Counter extends Component {
             <button onClick={this.props.onStoreResults}>Store Results</button>
             <ul>
                 {this.props.storeResults.map(strResult => {
-                    <li key={strResult.id} onClick={() => this.props.onDeleteResults(str.Results.id)} >{strResult.value}</li>
+                    <li key={strResult.id} onClick={() => this.props.onDeleteResults(strResult.Results.id)} >{strResult.value}</li>
                 })}
                 
             </ul>
@@ -49,19 +51,19 @@ class Counter extends Component {
 
 const mapStatetoProps = state => {
     return {
-        ctr: state.counter,
-        storeResults: state.results
+        ctr: state.ctr.counter,
+        storeResults: state.res.results
     };
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onIncrementCounter: () => dispatch({type: 'INCREMENT'}),
-        onDecrementCounter: () => dispatch({type: 'DECREMENT'}),
-        onAddCounter: () => dispatch({type: 'ADD', val: 10 }),
-        onSubtractCounter: () => dispatch({type: 'SUBTRACT', val: 15}),
-        onStoreResults: () =>dispatch({type: 'STORE_RESULT'}),
-        onDeleteResults: (id) =>dispatch({type: 'DELETE_RESULT', resultElId: id})
+        onIncrementCounter: () => dispatch({type: actionTypes.INCREMENT}),
+        onDecrementCounter: () => dispatch({type: actionTypes.DECREMENET}),
+        onAddCounter: () => dispatch({type: actionTypes.ADD, val: 10 }),
+        onSubtractCounter: () => dispatch({type: actionTypes.SUBTRACT, val: 15}),
+        onStoreResults: () =>dispatch({type: actionTypes.STORE_RESULT}),
+        onDeleteResults: (id) =>dispatch({type: actionTypes.DELETE_RESULT, resultElId: id})
     };
 };
 
