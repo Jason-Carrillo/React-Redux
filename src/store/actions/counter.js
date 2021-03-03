@@ -1,24 +1,24 @@
-import * as actionTypes from './actionTypes'
+import * as actionTypes from './result'
 
 export const increment = () => {
     return {
-        type: INCREMENT
+        type: actionTypes.INCREMENT
     }
 };
 export const decrement = () => {
     return {
-        type: DECREMENET
+        type: actionTypes.DECREMENET
     }
 };
 export const add = (value) => {
     return {
-        type: ADD,
+        type: actionTypes.ADD,
         val: value
     }
 };
 export const subtract = (value) => {
     return {
-        type: SUBTRACT,
+        type: actionTypes.SUBTRACT,
         val: value
     }
 };
