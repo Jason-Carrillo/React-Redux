@@ -7,7 +7,8 @@ const initialState = {
 }
 
 const deleteResult = (state, action) => {
-
+    const updatedArray = state.results.filter((result, index) => result.id !== action.resultElId)
+    return updateObject(state, {results: updatedArray})
 }
 
 const reducer = (state = initialState, action) => {
@@ -19,10 +20,6 @@ const reducer = (state = initialState, action) => {
         // const id = 2;
         // const newArray = [...state.results];
         // newArray.results.splice(id, 1)
-
-
-        const updatedArray = state.results.filter((result, index) => result.id !== action.resultElId)
-        return updateObject(state, {results: updatedArray})
     }
     return state;
 
