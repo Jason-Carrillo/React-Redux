@@ -27,10 +27,19 @@ export const subtract = (value) => {
         val: value
     }
 };
-export const storeResult = (result) => {
+
+export const saveResult = (res) => {
     return {
         type: STORE_RESULT,
         result: result
+    }
+}
+
+export const storeResult = (result) => {
+    return dispatch =>  {
+        setTimeout( () => {
+            dispatch(saveResult)
+        }, 2000);
     }
 };
 export const deleteResult = (resultElId) => {
