@@ -12,26 +12,30 @@ export const increment = () => {
 };
 export const decrement = () => {
     return {
-        type: INCREMENT
+        type: DECREMENET
     }
 };
-export const add = () => {
+export const add = (value) => {
     return {
-        type: INCREMENT
+        type: ADD,
+        val: value
     }
 };
-export const subtract = () => {
+export const subtract = (value) => {
     return {
-        type: INCREMENT
+        type: SUBTRACT,
+        val: value
     }
 };
-export const store_result = () => {
+export const storeResult = (result) => {
     return {
-        type: INCREMENT
+        type: STORE_RESULT,
+        result: result
     }
 };
-export const delete_result = () => {
+export const deleteResult = (resultElId) => {
     return {
-        type: INCREMENT
+        type: DELETE_RESULT,
+        result: resultElId
     }
 };
