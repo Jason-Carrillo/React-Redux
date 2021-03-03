@@ -20,6 +20,7 @@ const reducer = (state = initialState, action) => {
         // const id = 2;
         // const newArray = [...state.results];
         // newArray.results.splice(id, 1)
+        return deleteResult(state, action)
     }
     return state;
 
