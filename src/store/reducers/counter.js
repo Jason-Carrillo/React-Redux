@@ -10,8 +10,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.INCREMENT:
             return updateObject(state, {counter: state.counter + 1});
         case actionTypes.DECREMENET:
-        return updateObject(state, {counter: state.counter - 1});
-           
+            return updateObject(state, {counter: state.counter - 1});
         case actionTypes.ADD:
             return updateObject(state, {counter: state.counter + action.val});
         case actionTypes.SUBTRACT:
