@@ -6,6 +6,10 @@ const initialState = {
     results: []
 }
 
+const deleteResult = (state, action) => {
+
+}
+
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         
