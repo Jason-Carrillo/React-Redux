@@ -10,3 +10,28 @@ export const increment = () => {
         type: INCREMENT
     }
 };
+export const decrement = () => {
+    return {
+        type: INCREMENT
+    }
+};
+export const add = () => {
+    return {
+        type: INCREMENT
+    }
+};
+export const subtract = () => {
+    return {
+        type: INCREMENT
+    }
+};
+export const store_result = () => {
+    return {
+        type: INCREMENT
+    }
+};
+export const delete_result = () => {
+    return {
+        type: INCREMENT
+    }
+};
